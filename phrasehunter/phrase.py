@@ -44,9 +44,12 @@ class Phrase:
         checks to see if the letter selected by the user matches a letter in the
         phrase
         """
-        for index, letter in enumerate(phrase):
+        retvalue = False
+        for index, letter in enumerate(self.phrase):
             if guess == letter:
                 self.phrase_guessed[index] = True
+                retvalue = True
+        return retvalue
 
 
     def check_complete(self):
