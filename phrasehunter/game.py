@@ -57,9 +57,9 @@ class Game:
     def get_guess(self):
         while True:
             self.active_phrase.display()
-            letter = input('Guess a letter: ')
+            letter = input('Guess a letter: ').lower()
 
-            if len(letter) > 1 and letter.lower() not in string.ascii_lowercase:
+            if len(letter) > 1 or letter not in string.ascii_lowercase:
                 print('Invalid input. Please try again. Must be a letter')
             else:
                 return letter
@@ -82,3 +82,8 @@ class Game:
         if play_again.lower() == 'yes':
             self.newgame = Game()
             self.newgame.start()
+        elif play_again.lower() == 'no':
+            print('Thank you for playing!')
+        else:
+            print('\nInvalid response. Try again')
+            self.game_over()

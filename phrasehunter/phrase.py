@@ -12,16 +12,16 @@ class Phrase:
 
 
     def __str__(self):
-        output = ''
+        output = ' '
 
         for index, letter_guessed in enumerate(self.phrase_guessed):
             if letter_guessed:
                 output += self.phrase[index]
             else:
-                output += '_'
+                output += '_ '
 
             if letter_guessed == ' ':
-                output += ' '
+                output += '  '
 
         return output
 
