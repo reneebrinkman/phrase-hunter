@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 # Import your Game class
 import phrasehunter.game
 

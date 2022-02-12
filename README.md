@@ -2,9 +2,13 @@
 
 This is a simple game for guessing the letters of a phrase, similar to hangman.
 
+Install it with
+
+`$ pip install phrase-hunter`
+
 Run it with
 
-`$ python3 app.py`
+`$ phrase-hunter`
 
 ## Source code
 
